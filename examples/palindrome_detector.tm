@@ -11,10 +11,10 @@
 #T={0,1,_,T,r,u,e,F,a,l,s}
 
 ; initial state
-#q0={0}
+#q0=0
 
 ; blank symbol
-#B={_}
+#B=_
 
 ; final state set
 #F={halt-accept,halt-reject}
