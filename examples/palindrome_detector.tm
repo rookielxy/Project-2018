@@ -2,22 +2,22 @@
 ; Input: a string of 0's and 1's, eg '1001001'
 
 ; finite state set
-#Q={0,1o,1i,2o,2i,3,4,accept,accept2,accept3,accept4,halt-accept,reject,reject2,reject3,reject4,reject5,halt-reject}
+#Q = {0,1o,1i,2o,2i,3,4,accept,accept2,accept3,accept4,halt-accept,reject,reject2,reject3,reject4,reject5,halt-reject}
 
 ; input symbol set
-#S={0,1}
+#S = {0,1}
 
 ; tape symbol set
-#T={0,1,_,T,r,u,e,F,a,l,s}
+#T = {0,1,_,T,r,u,e,F,a,l,s}
 
 ; initial state
-#q0=0
+#q0 = 0
 
 ; blank symbol
-#B=_
+#B = _
 
 ; final state set
-#F={halt-accept,halt-reject}
+#F = {halt-accept,halt-reject}
 
 ; State 0: read the leftmost symbol
 0 0 _ r 1o
