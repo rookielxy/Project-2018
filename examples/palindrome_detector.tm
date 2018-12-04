@@ -1,23 +1,25 @@
 ; This example program checks if the input string is a binary palindrome.
 ; Input: a string of 0's and 1's, eg '1001001'
 
-; finite state set
+; the finite set of states
 #Q = {0,1o,1i,2o,2i,3,4,accept,accept2,accept3,accept4,halt_accept,reject,reject2,reject3,reject4,reject5,halt_reject}
 
-; input symbol set
+; the finite set of input symbols
 #S = {0,1}
 
-; tape symbol set
+; the complete set of tape symbols
 #T = {0,1,_,T,r,u,e,F,a,l,s}
 
-; initial state
+; the start state
 #q0 = 0
 
-; blank symbol
+; the blank symbol
 #B = _
 
-; final state set
+; the set of final states
 #F = {halt_accept,halt_reject}
+
+; the transition functions
 
 ; State 0: read the leftmost symbol
 0 0 _ r 1o
