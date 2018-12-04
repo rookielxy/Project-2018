@@ -2,7 +2,7 @@
 ; Input: a string of 0's and 1's, eg '1001001'
 
 ; finite state set
-#Q = {0,1o,1i,2o,2i,3,4,accept,accept2,accept3,accept4,halt-accept,reject,reject2,reject3,reject4,reject5,halt-reject}
+#Q = {0,1o,1i,2o,2i,3,4,accept,accept2,accept3,accept4,halt_accept,reject,reject2,reject3,reject4,reject5,halt_reject}
 
 ; input symbol set
 #S = {0,1}
@@ -17,7 +17,7 @@
 #B = _
 
 ; final state set
-#F = {halt-accept,halt-reject}
+#F = {halt_accept,halt_reject}
 
 ; State 0: read the leftmost symbol
 0 0 _ r 1o
@@ -49,11 +49,11 @@
 accept * T r accept2
 accept2 * r r accept3
 accept3 * u r accept4
-accept4 * e * halt-accept
+accept4 * e * halt_accept
 
 reject * _ l reject
 reject _ F r reject2
 reject2 _ a r reject3
 reject3 _ l r reject4
 reject4 _ s r reject5
-reject5 * e * halt-reject
+reject5 * e * halt_reject
