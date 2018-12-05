@@ -216,7 +216,7 @@
     ```
     java -jar turing.jar xxx.tm input.txt
     ```
-    该命令运行后，会输出两个文件，
+    该命令运行后，会在当前路径上生成两个文件 `console.txt` 和 `result.txt`。
 
 ## 4. 提交说明
   
