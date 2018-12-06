@@ -91,12 +91,12 @@
     >  ```
     >
     > *注 5*：若需要向 `0` 索引左边的纸带单元中读写字符，请在 `Index` 中按照 `"... 3 2 1 0 1 2 3 ..."` 的格式 (即省略 `-3 -2 -1` 等负索引的负号) 对索引进行描述。 
-3. 模拟运行结束后，将纸带上的内容 (有限长度，首尾分别为纸带上第一个和最后一个非空格符号) 作为最后的输出。并输出以下信息：
+3. 模拟运行结束后，将纸带上的内容 (首尾分别为纸带上第一个和最后一个非空格符号) 作为最后的输出，对于上述格式描述中的示例，最后纸带上的内容为 `True`。并按以下格式输出信息：
     ```
     Result: XXXX
     ==================== END ====================
     ```
-    其中 `XXXX` 为模拟运行结束后纸带上的内容。
+    其中 `XXXX` 为模拟运行结束后纸带上的内容，对于上述示例即为 `True`。
 
 ### 任务三：图灵机程序
 
@@ -108,7 +108,7 @@
 ### 其他
 
 1. 编程语言：**`Java 8`**
-2. 推荐使用 JetBrains 的 ***[IntelliJ IDEA](https://www.jetbrains.com/idea/ )*** 来创建和开发 Java 项目。你可以从 ***[这里 (Student License)](https://www.jetbrains.com/student/)*** 获得 JetBrains 全部产品的免费使用权。此外，***IntelliJ IDEA*** 也有 ***[社区版 (Community)](https://www.jetbrains.com/idea/download/)*** 可以直接免费使用。
+2. 推荐使用 JetBrains 的 ***[IntelliJ IDEA](https://www.jetbrains.com/idea/ )*** 来创建和开发 Java 项目 (你可以从 ***[这里 (Student License)](https://www.jetbrains.com/student/)*** 获得 JetBrains 全部产品的免费使用权。此外，***IntelliJ IDEA*** 也有 ***[社区版 (Community)](https://www.jetbrains.com/idea/download/)*** 可以直接免费使用)。
 
 ## 2. 图灵机程序语法
 
@@ -150,7 +150,7 @@
     #F = {halt_accept,halt_reject}
     ```
 
-7. **转移函数**：
+7. **转移函数 <img src="./assets/d.gif"/>**：
     - 每个转移函数占用 (且仅占用) 图灵机程序的一行，行内容为一个五元组。五元组格式为："旧状态 旧符号 新符号 方向 新状态"，元组各部分之间以一个空格分隔。
         - (新、旧) 状态定义见 **状态集 <img src="./assets/Q.gif"/>**。
         - (新、旧) 符号定义见 **纸带符号集 <img src="./assets/T.gif"/>**。
